@@ -1,6 +1,6 @@
 public class Anime {
     public String numberSeries;
-    //public String Player;
+    public String Player;
     public String codeVideo;
 
     public String getNumberSeries() {
@@ -11,13 +11,13 @@ public class Anime {
         this.numberSeries = numberSeries;
     }
 
-    /*public String getPlayer() {
+    public String getPlayer() {
         return Player;
     }
 
     public void setPlayer(String player) {
         Player = player;
-    }*/
+    }
 
     public String getCodeVideo() {
         return codeVideo;
@@ -31,11 +31,15 @@ public class Anime {
     {
 
     }
+    @Override
+    public String toString()  {
+        return this.numberSeries;
+    }
 
-    public Anime(String numberSeries, /*String Player,*/ String codeVideo)
+    public Anime(String numberSeries,String Player ,String codeVideo)
     {
         this.numberSeries=numberSeries;
-        //this.Player=Player;
+        this.Player=Player;
         this.codeVideo=codeVideo;
     }
 

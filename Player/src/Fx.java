@@ -28,7 +28,7 @@ public class Fx extends Application {
         comboBox.setItems(list);
 
         comboBox.getSelectionModel().selectFirst();
-        String s = list.get(0).numberSeries;
+        String s = String.valueOf(list.get(0).numberSeries);
         System.out.println(s);
         /*primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));

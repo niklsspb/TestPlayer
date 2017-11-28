@@ -27,7 +27,7 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();*/
-        /*ComboBox<Planet> comboBox = new ComboBox<Planet>();
+        ComboBox<Planet> comboBox = new ComboBox<Planet>();
 
         ObservableList<Planet> list = PlanetDAO.getPlanetList();
         //String s = list.get(0).code;
@@ -44,7 +44,7 @@ public class Main extends Application {
         primaryStage.setTitle("ComboxBox (o7planning.org)");
         Scene scene = new Scene(root, 350, 300);
         primaryStage.setScene(scene);
-        primaryStage.show();*/
+        primaryStage.show();
 
         /*WebView webview = new WebView();
         webview.getEngine().load(
@@ -54,7 +54,7 @@ public class Main extends Application {
 
         primaryStage.setScene(new Scene(webview));
         primaryStage.show();*/
-        primaryStage.setTitle("Embedded Media Player");
+        /*primaryStage.setTitle("Embedded Media Player");
         Group root = new Group();
         Scene scene = new Scene(root, 640, 480);
         Media media = new Media(MEDIA_URL);
@@ -71,7 +71,7 @@ public class Main extends Application {
         ((Group)scene.getRoot()).getChildren().add(mediaView);
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
-        primaryStage.show();
+        primaryStage.show();*/
     }
 
 
