@@ -13,7 +13,7 @@ public class AnimeDAO {
         String key = null;
         String value = null;
         String player = null;
-
+        ObservableList<Anime> list = FXCollections.observableArrayList();
         for (int i = 0; i < elements.size(); i++) {
 
             key = elements.get(i).text();
@@ -22,9 +22,9 @@ public class AnimeDAO {
             array[i] = new Anime(key, value);
             //uf.put(key,player);
             //list.add(array[i]);
-
+            list = FXCollections.observableArrayList(array[i]);
         }
-        ObservableList<Anime> list = FXCollections.observableArrayList();
+        //ObservableList<Anime> list = FXCollections.observableArrayList();
         for (int i = 0; i <array.length ; i++) {
 
         }

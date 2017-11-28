@@ -1,4 +1,6 @@
+import org.jsoup.Jsoup;
 import org.jsoup.select.Elements;
+import org.w3c.dom.Element;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -32,9 +34,30 @@ public class NPlayer {
         NPlayer nPlayer = new NPlayer();
 
         ParseSITE ps = new ParseSITE();
+       /* String strText =
+                Jsoup
+                        .connect("http://www.useragentstring.com/")
+                        .userAgent("Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36")
+                        .get()
+                        .text();
+
+        System.out.println(strText);*/
         String url = "http://fan-naruto.ru/load/anime_onlajn/ongoingi/van_pis_smotret_russkie_subtitry_vse_serii/51-1-0-2489";
         Elements elements = ps.getUrl(url);
+        Elements elements1 =ps.getSite("http://video.sibnet.ru/video2663676");
+        for (int j = 0; j <elements1.size() ; j++) {
 
+
+             String  s = elements1.get(j).toString();
+             if (s.indexOf("src:")>1) {
+                 String d = s.substring(s.indexOf("src:"));
+                 String result = d.substring(d.indexOf("\""));
+                 String[] objects = result.split(",");
+                 String sz = objects[0].substring(1, objects[0].lastIndexOf("\""));
+                 System.out.println(sz);
+             }
+
+        }
         String key = null;
         String value = null;
         String player = null;
